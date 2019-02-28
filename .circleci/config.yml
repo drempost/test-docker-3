@@ -9,5 +9,6 @@ jobs:
 
                         - run:
                                 name: run apache2
-                                command: service apache2 start
-                                command: service mysql start
+                                command: |
+                                        service apache2 start
+                                        service mysql start
