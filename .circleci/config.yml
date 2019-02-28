@@ -8,5 +8,6 @@ jobs:
                         - checkout
 
                         - run:
-                                name: run container
-                                command: service apache2 start                
+                                name: run apache2
+                                command: service apache2 start
+                                command: service mysql start
