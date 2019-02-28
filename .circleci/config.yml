@@ -3,3 +3,10 @@ jobs:
         build:
                 docker:
                         - image: drempost/lamp:latest
+                
+                steps:
+                        - checkout
+
+                        - run:
+                                name: run container
+                                command: service apache2 start                
