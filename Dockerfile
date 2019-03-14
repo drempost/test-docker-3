@@ -8,5 +8,6 @@ copy deployLAMP.sh /
 
 run /deployLAMP.sh
 
+CMD /usr/sbin/apache2ctl -D FOREGROUND
 
 expose 80
