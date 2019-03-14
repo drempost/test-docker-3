@@ -1,13 +1,13 @@
-from ubuntu:18.04
+FROM ubuntu:18.04
 
-label description="test.lamp"
+LABEL description="test.lamp"
 
-env DEBIAN_FRONTEND=noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
-copy deployLAMP.sh /
+COPY deployLAMP.sh /
 
-run /deployLAMP.sh
+RUN /deployLAMP.sh
 
-CMD /usr/sbin/apache2ctl -D FOREGROUND
+CMD ["/usr/sbin/apache2ctl","-D","FOREGROUND"]
 
-expose 80
+EXPOSE 80
